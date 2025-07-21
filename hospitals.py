@@ -7,7 +7,6 @@ import os
 def get_hospitals_in_hyderabad(output_file):
     overpass_url = "http://overpass-api.de/api/interpreter"
     
-    # Overpass query for hospitals in Hyderabad
     overpass_query = """
     [out:xml];
     area[name="Hyderabad"]->.searchArea;
@@ -45,7 +44,6 @@ def get_hospitals_in_hyderabad(output_file):
 def get_area_coordinates(area_name):
     overpass_url = "http://overpass-api.de/api/interpreter"
     
-    # Overpass query to get area coordinates
     overpass_query = f"""
     [out:json];
     node[name="{area_name}"];
